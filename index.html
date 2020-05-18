@@ -1,0 +1,625 @@
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans';
+        }
+
+        #content-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background: url(./images/banner.jpg);
+            background-repeat: no-repeat; */
+        }
+
+        #menu {
+            margin-left: 40%;
+            width: 32%;
+            margin-top: 1%;
+        }
+
+        #choices:link {
+            text-decoration: none;
+        }
+
+        #choices:visited {
+            text-decoration: none;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: violet;
+        }
+
+        #navbar {
+            display: flex;
+            width: 100%;
+            height: 10%;
+            margin-bottom: 3%;
+            margin-top: 2%;
+            justify-content: center;
+        }
+
+        #logo {
+            font-family: cursive;
+            font-size: xx-large;
+        }
+
+        .item {
+            margin-right: 4%;
+        }
+
+        #message {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+        }
+
+
+        #studio-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10%
+        }
+
+        #studioPhoto {
+            height: 75%;
+            width: 85%;
+        }
+
+        #teachers-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #headTeachers {
+            display: flex;
+            height: 60%;
+            width: 100%;
+        }
+
+        #secondTeachers {
+            display: flex;
+            height: 40%;
+            width: 100%;
+        }
+
+        #teach1 {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #teach2 {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .headshot {
+            height: 70%;
+        }
+
+        #teach3 {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #teach4 {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #teach5 {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #schedule-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: violet;
+        }
+
+        #contact-container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        div#main {
+            width: 830px;
+            height: 650px;
+            margin: 0 auto;
+        }
+
+        div#form_sample {
+            text-align: center;
+            border: 1px solid #ccc;
+            width: 300px;
+            padding: 0 50px 15px;
+            margin-top: 20px;
+            box-shadow: 0 0 15px;
+            border-radius: 6px;
+            float: left
+        }
+
+        #main h1 {
+            margin-top: 40px
+        }
+
+        hr {
+            margin-top: -5px
+        }
+
+        label {
+            float: left;
+            font-size: 16px
+        }
+
+        input[type="text"] {
+            width: 100%;
+            margin-top: 10px;
+            height: 35px;
+            margin-bottom: 25px;
+            padding: 10px;
+            border: 3px solid violet
+        }
+
+        textarea {
+            width: 100%;
+            border: 3px solid violet;
+            padding: 10px;
+            margin-bottom: 25px;
+            margin-top: 10px;
+            height: 100px;
+            resize: none
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px 45px;
+            background-color: violet;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #newsletter {
+            height: 50vh;
+            width: 100vw;
+            background: black;
+            color: violet;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer {
+            display: flex;
+            flex-direction: row;
+            height: 50vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        #info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 33vw;
+            align-items: center;
+        }
+
+        #links {
+            width: 33vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #social {
+            width: 33vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #spam {
+            color: violet;
+            font-size: 16px;
+        }
+
+        #subscribe {
+            font-size: 24px;
+        }
+
+        #label {
+            font-size: 36px;
+        }
+
+        input {
+            height: 5vh;
+            width: 35vw;
+        }
+
+        #submit {
+            width: 8vw;
+            height: 5vh;
+            color: violet;
+            background-color: black;
+            border-radius: 15px;
+            border: 1px solid violet;
+        }
+
+        #submit:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        .terms {
+            margin-bottom: 2%;
+        }
+
+        .terms:hover {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .terms:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        #socialIcon {
+            height: 50px;
+            width: 50px;
+            margin-right: 5%;
+        }
+
+        .downArrow {
+            position: fixed;
+            bottom: 5%;
+            /* left: 50%; */
+        }
+
+        .bounce {
+            -moz-animation: bounce 3s infinite;
+            -webkit-animation: bounce 3s infinite;
+            animation: bounce 3s infinite;
+        }
+
+        @-moz-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -moz-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -moz-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+
+            60% {
+                -moz-transform: translateY(-15px);
+                transform: translateY(-15px);
+            }
+        }
+
+        @-webkit-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -moz-transform: translateY(-30px);
+                -ms-transform: translateY(-30px);
+                -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+
+            60% {
+                -moz-transform: translateY(-15px);
+                -ms-transform: translateY(-15px);
+                -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+
+    <title>My Pilares</title>
+
+</head>
+
+<body>
+
+    <div id="content-container">
+
+        <div id="navbar">
+
+            <div id="logo">My Pilates</div>
+
+            <div id="menu">
+                <span class="item"><a href="#studio-container">The Studio</a></span>
+                <span class="item"><a href="#teachers-container">Instructors</a></span>
+                <span class="item"><a href="#schedule-container">Schedule</a></span>
+                <span class="item"><a href="#contact-container">Contact</a></span>
+            </div>
+
+        </div>
+
+        <div id="message">
+
+            <img id="centerBanner" src="./images/banner.jpg">
+
+            <div class="downArrow bounce">
+                <img width="40" height="40" alt=""
+                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="studio-container">
+
+        <div id="studio-photo">
+            <img id="studioPhoto" src="./images/studioMain.jpg">
+        </div>
+        <div id="studio-text">
+            <p id="description">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English versions from the 1914 translation by H.
+                Rackham. </p>
+        </div>
+
+    </div>
+
+    <div id="teachers-container">
+
+        <div id="headTeachers">
+
+            <div id="teach1">
+                <img class="headshot" src="./images/dog.jpg">
+                <span>Head Teacher</span>
+                <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+
+            <div id="teach2">
+                <img class="headshot" src="./images/dog.jpg">
+                <span>Head Teacher</span>
+                <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+
+        </div>
+
+        <div id="secondTeachers">
+
+            <div id="teach3">
+                    <img class="headshot" src="./images/dog.jpg">
+                    <span>Other Teacher</span>
+                    <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+
+            <div id="teach4">
+                <img class="headshot" src="./images/dog.jpg">
+                <span>Other Teacher</span>
+                <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+
+            <div id="teach5">
+                    <img class="headshot" src="./images/dog.jpg">
+                    <span>Other Teacher</span>
+                    <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="schedule-container">
+        Schedule HERE 
+    </div>
+
+    <div id="contact-container">
+
+        <!-- <div id="main">
+            <div id="form_sample"></div> 
+        </div> -->
+
+
+        <!-- <div id="form">
+
+        </div>
+
+        <div id="footer">
+
+        </div> -->
+        <div id="newsletter">
+            Contact form goes here
+        </div>
+
+        <div id="footer">
+            <div id="info">
+                <span><img src="./images/logo.jpg"></span>
+                <span>© 2020, My Pilates</span>
+                <span>mypilates2018@gmail.com</span>
+            </div>
+
+            <div id="social">
+                <img id="socialIcon" src="./images/facebook.png">
+                <img id="socialIcon" src="./images/instagram.png">
+                <img id="socialIcon" src="./images/twitter.png">
+                <img id="socialIcon" src="./images/freefit.png">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+<script>
+
+
+    // Fetching HTML Elements in Variables by ID.
+    var x = document.getElementById("form_sample");
+    var createform = document.createElement('form'); // Create New Element Form
+    createform.setAttribute("action", ""); // Setting Action Attribute on Form
+    createform.setAttribute("method", "post"); // Setting Method Attribute on Form
+    x.appendChild(createform);
+
+    var heading = document.createElement('h2'); // Heading of Form
+    heading.innerHTML = "Contact Form ";
+    createform.appendChild(heading);
+
+    var line = document.createElement('hr'); // Giving Horizontal Row After Heading
+    createform.appendChild(line);
+
+    var linebreak = document.createElement('br');
+    createform.appendChild(linebreak);
+
+    var namelabel = document.createElement('label'); // Create Label for Name Field
+    namelabel.innerHTML = "Your Name : "; // Set Field Labels
+    createform.appendChild(namelabel);
+
+    var inputelement = document.createElement('input'); // Create Input Field for Name
+    inputelement.setAttribute("type", "text");
+    inputelement.setAttribute("name", "dname");
+    createform.appendChild(inputelement);
+
+    var linebreak = document.createElement('br');
+    createform.appendChild(linebreak);
+
+    var emaillabel = document.createElement('label'); // Create Label for E-mail Field
+    emaillabel.innerHTML = "Your Email : ";
+    createform.appendChild(emaillabel);
+
+    var emailelement = document.createElement('input'); // Create Input Field for E-mail
+    emailelement.setAttribute("type", "text");
+    emailelement.setAttribute("name", "demail");
+    createform.appendChild(emailelement);
+
+    var emailbreak = document.createElement('br');
+    createform.appendChild(emailbreak);
+
+    var messagelabel = document.createElement('label'); // Append Textarea
+    messagelabel.innerHTML = "Your Message : ";
+    createform.appendChild(messagelabel);
+
+    var texareaelement = document.createElement('textarea');
+    texareaelement.setAttribute("name", "dmessage");
+    createform.appendChild(texareaelement);
+
+    var messagebreak = document.createElement('br');
+    createform.appendChild(messagebreak);
+
+    var submitelement = document.createElement('input'); // Append Submit Button
+    submitelement.setAttribute("type", "submit");
+    submitelement.setAttribute("name", "dsubmit");
+    submitelement.setAttribute("value", "Submit");
+    createform.appendChild(submitelement);
+
+
+
+</script>
+
+</html>
