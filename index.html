@@ -90,9 +90,22 @@
             padding: 10%
         }
 
+        #studio-photo {
+            height: 500px;
+        }
+
+        #studio-photo,
+        #studio-text {
+            width: 50%
+        }
+
         #studioPhoto {
             height: 75%;
             width: 85%;
+        }
+
+        #studio-content {
+            display: flex;
         }
 
         #teachers-container {
@@ -103,9 +116,14 @@
             align-items: center;
         }
 
+        #instructors {
+            font-family: cursive;
+            font-size: x-large;
+        }
+
         #headTeachers {
             display: flex;
-            height: 60%;
+            height: 100%;
             width: 100%;
         }
 
@@ -324,7 +342,7 @@
             color: black;
         }
 
-        #socialIcon {
+        .socialIcon {
             height: 50px;
             width: 50px;
             margin-right: 5%;
@@ -450,7 +468,7 @@
     </div>
 
     <div id="studio-container">
-
+        <div id="studio-content">
         <div id="studio-photo">
             <img id="studioPhoto" src="./images/studioMain.jpg">
         </div>
@@ -460,28 +478,29 @@
                 reproduced in their exact original form, accompanied by English versions from the 1914 translation by H.
                 Rackham. </p>
         </div>
-
+        </div>
     </div>
 
     <div id="teachers-container">
-
+        <div id="instructors">Our Instructors</div>
         <div id="headTeachers">
+            
 
             <div id="teach1">
-                <img class="headshot" src="./images/dog.jpg">
-                <span>Head Teacher</span>
-                <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+                <img class="headshot" src="./images/maytal2.png">
+                <p>Maytal, Head Instructor</p>
+                <p>blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
 
             <div id="teach2">
-                <img class="headshot" src="./images/dog.jpg">
-                <span>Head Teacher</span>
-                <span>blah blah blah blah blah blah blah blah blah blah blah</span>
+                <img class="headshot" src="./images/meirav2.png">
+                <p>Meirav, Head Instructor</p>
+                <p>blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
 
         </div>
 
-        <div id="secondTeachers">
+        <!-- <div id="secondTeachers">
 
             <div id="teach3">
                     <img class="headshot" src="./images/dog.jpg">
@@ -501,7 +520,7 @@
                     <span>blah blah blah blah blah blah blah blah blah blah blah</span>
             </div>
 
-        </div>
+        </div> -->
 
     </div>
 
@@ -535,10 +554,10 @@
             </div>
 
             <div id="social">
-                <img id="socialIcon" src="./images/facebook.png">
-                <img id="socialIcon" src="./images/instagram.png">
-                <img id="socialIcon" src="./images/twitter.png">
-                <img id="socialIcon" src="./images/freefit.png">
+                <a class="socialIcon" href="https://facebook.com"><img class="socialIcon" src="./images/facebook.png"></a>
+                <a class="socialIcon" href="https://instagram.com/mypilates7?igshid=1vvs3t468ollw"><img class="socialIcon" src="./images/instagram.png"></a>
+                <a class="socialIcon" href="https://twitter.com/explore"><img class="socialIcon" src="./images/twitter.png"></a>
+                <a class="socialIcon" href="https://freefit.co.il/"><img class="socialIcon" src="./images/freefit.png"></a>
             </div>
         </div>
 
