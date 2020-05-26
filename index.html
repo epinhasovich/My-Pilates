@@ -29,7 +29,7 @@
 
         #menu {
             margin-left: 40%;
-            width: 32%;
+            width: 40%;
             margin-top: 1%;
         }
 
@@ -71,7 +71,7 @@
         }
 
         .item {
-            margin-right: 4%;
+            margin-right: 10%;
         }
 
         #message {
@@ -153,6 +153,11 @@
             height: 70%;
         }
 
+        .teach-name {
+            color: darkslategrey;
+            font-style: italic;
+        }
+
         #teach3 {
             width: 33%;
             display: flex;
@@ -182,8 +187,15 @@
             width: 100vw;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            background: violet;
+            background: #7F00FF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #E100FF, #7F00FF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }
 
         #contact-container {
@@ -431,6 +443,18 @@
                 transform: translateY(-15px);
             }
         }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: white;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+        }
     </style>
 
     <title>My Pilares</title>
@@ -446,10 +470,10 @@
             <div id="logo">My Pilates</div>
 
             <div id="menu">
-                <span class="item"><a href="#studio-container">The Studio</a></span>
-                <span class="item"><a href="#teachers-container">Instructors</a></span>
-                <span class="item"><a href="#schedule-container">Schedule</a></span>
-                <span class="item"><a href="#contact-container">Contact</a></span>
+                <span class="item"><a href="#studio-container">סטודיו</a></span>
+                <span class="item"><a href="#teachers-container">מורים</a></span>
+                <span class="item"><a href="#schedule-container">לוח זמנים</a></span>
+                <span class="item"><a href="#contact-container">צור קשר</a></span>
             </div>
 
         </div>
@@ -469,32 +493,31 @@
 
     <div id="studio-container">
         <div id="studio-content">
-        <div id="studio-photo">
-            <img id="studioPhoto" src="./images/studioMain.jpg">
-        </div>
-        <div id="studio-text">
-            <p id="description">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English versions from the 1914 translation by H.
-                Rackham. </p>
-        </div>
+            <div id="studio-photo">
+                <img id="studioPhoto" src="./images/studioMain.jpg">
+            </div>
+            <div id="studio-text">
+                <p id="description">לאחר שהסינים לא זכו במכרז התפלת המים הענק בפלמחים, כפי שפורסם לראשונה ב-ynet, כעת
+                    השאלה היא אם יזכו במכרז לתחנת כוח. תוצאה דומה עלולה להוביל למשבר. בנמלי אשדוד וחיפה, ברכבת הקלה
+                    ובמנהרות הכרמל הם כבר משקיעים, ובארה"ב הגבירו לאחרונה את הלחץ על ישראל</p>
+            </div>
         </div>
     </div>
 
     <div id="teachers-container">
-        <div id="instructors">Our Instructors</div>
+        <div id="instructors">מורים</div>
         <div id="headTeachers">
-            
+
 
             <div id="teach1">
                 <img class="headshot" src="./images/maytal2.png">
-                <p>Maytal, Head Instructor</p>
+                <p class="teach-name">מיטלת, מדריך ראש</p>
                 <p>blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
 
             <div id="teach2">
                 <img class="headshot" src="./images/meirav2.png">
-                <p>Meirav, Head Instructor</p>
+                <p class="teach-name">מירבת, מדריך ראש</p>
                 <p>blah blah blah blah blah blah blah blah blah blah blah</p>
             </div>
 
@@ -525,7 +548,206 @@
     </div>
 
     <div id="schedule-container">
-        Schedule HERE 
+        <h1 style="color: white; font-family: cursive;">לוח זמנים</h1>
+        <div id="schedule">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ראשון</th>
+                        <th>שני</th>
+                        <th>שלישי</th>
+                        <th>רביעי</th>
+                        <th>חמישי</th>
+                        <th>שישי</th>
+                        <th>שבת</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>05:30</strong></td>
+                        <td></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>07:30</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ספיר</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>08:00</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>08:30</strong></td>
+                        <td>מירב</td>
+                        <td>מירב</td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td></td>
+                        <td>ספיר</td>
+                        <td>קרן</td>
+                    </tr>
+                    <tr>
+                        <td><strong>09:00</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>09:30</strong></td>
+                        <td>מירב</td>
+                        <td>מירב</td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td></td>
+                        <td>ספיר</td>
+                        <td>קרן</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:30</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>קרן</td>
+                    <tr>
+                        <td><strong></strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong></strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>17:30</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>18:00</strong></td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td>ספיר</td>
+                        <td></td>
+                        <td>קרן</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>18:30</strong></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>19:00</strong></td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td>ספיר</td>
+                        <td></td>
+                        <td>קרן</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>19:30</strong></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td>רון</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>20:00</strong></td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td>ספיר</td>
+                        <td></td>
+                        <td>קרן</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>20:30</strong></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td>רון</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>21:00</strong></td>
+                        <td></td>
+                        <td>מירב</td>
+                        <td>ספיר</td>
+                        <td></td>
+                        <td>קרן</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>21:30</strong></td>
+                        <td>מיטל</td>
+                        <td></td>
+                        <td></td>
+                        <td>רון</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div id="contact-container">
@@ -549,15 +771,19 @@
         <div id="footer">
             <div id="info">
                 <span><img src="./images/logo.jpg"></span>
-                <span>© 2020, My Pilates</span>
+                <span>© 2018, My Pilates</span>
                 <span>mypilates2018@gmail.com</span>
             </div>
 
             <div id="social">
-                <a class="socialIcon" href="https://facebook.com"><img class="socialIcon" src="./images/facebook.png"></a>
-                <a class="socialIcon" href="https://instagram.com/mypilates7?igshid=1vvs3t468ollw"><img class="socialIcon" src="./images/instagram.png"></a>
-                <a class="socialIcon" href="https://twitter.com/explore"><img class="socialIcon" src="./images/twitter.png"></a>
-                <a class="socialIcon" href="https://freefit.co.il/"><img class="socialIcon" src="./images/freefit.png"></a>
+                <a class="socialIcon" href="https://facebook.com"><img class="socialIcon"
+                        src="./images/facebook.png"></a>
+                <a class="socialIcon" href="https://instagram.com/mypilates7?igshid=1vvs3t468ollw"><img
+                        class="socialIcon" src="./images/instagram.png"></a>
+                <a class="socialIcon" href="https://twitter.com/explore"><img class="socialIcon"
+                        src="./images/twitter.png"></a>
+                <a class="socialIcon" href="https://freefit.co.il/"><img class="socialIcon"
+                        src="./images/freefit.png"></a>
             </div>
         </div>
 
